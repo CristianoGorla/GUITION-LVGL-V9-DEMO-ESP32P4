@@ -1,0 +1,12 @@
+build/
+sdkconfig
+sdkconfig.old
+dependencies.lock
+managed_components/
+venv/
+.venv/
+env/
+__pycache__/
+.vscode/
+.DS_Store
+*.log
