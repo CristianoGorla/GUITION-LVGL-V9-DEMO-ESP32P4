@@ -25,11 +25,11 @@ void app_main(void)
 
     bsp_display_cfg_t cfg = {
         .lvgl_port_cfg = ESP_LVGL_PORT_INIT_CONFIG(),
-        .buffer_size = 1024 * 600,  // Fixed: actual display resolution
+        .buffer_size = 480 * 800,
         .double_buffer = BSP_LCD_DRAW_BUFF_DOUBLE,
         .flags = {
             .buff_dma = false,
-            .buff_spiram = true,  // Vendor uses PSRAM for large buffers
+            .buff_spiram = true,
             .sw_rotate = true,
         }
     };
