@@ -17,11 +17,11 @@
 #include "bsp/esp-bsp.h"
 #include "bsp/display.h"
 #include "bsp_board_extra.h"
-#include "lv_demos.h"
+#include "lv_ui.h"
 
 void app_main(void)
 {
-     ESP_ERROR_CHECK(bsp_extra_codec_init());
+    ESP_ERROR_CHECK(bsp_extra_codec_init());
 
     bsp_display_cfg_t cfg = {
         .lvgl_port_cfg = ESP_LVGL_PORT_INIT_CONFIG(),
@@ -37,8 +37,6 @@ void app_main(void)
     bsp_display_backlight_on();
 
     bsp_display_lock(0);
-    lv_demo_widgets();
-
+    lv_ui_dashboard_init();
     bsp_display_unlock();
-
 }
